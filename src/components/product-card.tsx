@@ -1,6 +1,5 @@
 import React from 'react'
 import NextImage from 'next/image'
-import NextLink from 'next/link'
 import styled from 'styled-components'
 
 interface ProductCardProps {
@@ -69,6 +68,11 @@ export const ProductCard = React.forwardRef<HTMLDivElement, ProductCardProps>(fu
     onSelectedClick?.()
   }
 
+  const onLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
+    onSelectedClick?.()
+  }
+
   const listElements = list.map((item) => (
     <ListItem key={item} $disabled={disabled}>
       {item}
@@ -111,9 +115,9 @@ export const ProductCard = React.forwardRef<HTMLDivElement, ProductCardProps>(fu
         ) : (
           <>
             <FooterText>{footer.text.default}</FooterText>{' '}
-            <NextLink href={footer.link.href} passHref>
-              <FooterLink>{footer.link.text}</FooterLink>
-            </NextLink>
+            <FooterLink href={footer.link.href} onClick={onLinkClick}>
+              {footer.link.text}
+            </FooterLink>
             .
           </>
         )}
