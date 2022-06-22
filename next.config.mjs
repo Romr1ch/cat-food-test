@@ -11,6 +11,7 @@ const nextConfig = {
     // Включение babel-plugin-styled-components.
     styledComponents: true,
   },
+  optimizeFonts: false,
 }
 
 export default nextConfig
