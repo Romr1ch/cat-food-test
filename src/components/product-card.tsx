@@ -54,7 +54,7 @@ export const ProductCard = React.forwardRef<HTMLDivElement, ProductCardProps>(fu
   } = props
   const [isHovered, setIsHovered] = React.useState(false)
 
-  const onMouseOut = () => {
+  const onMouseLeave = () => {
     if (selected) {
       setIsHovered(true)
     }
@@ -85,7 +85,7 @@ export const ProductCard = React.forwardRef<HTMLDivElement, ProductCardProps>(fu
         $disabled={disabled}
         $selected={selected}
         onClick={!disabled ? onClick : undefined}
-        onMouseOut={!disabled ? onMouseOut : undefined}
+        onMouseLeave={!disabled ? onMouseLeave : undefined}
       >
         <Header $disabled={disabled} $selected={selected}>
           <Description $disabled={disabled} $active={isHovered}>
