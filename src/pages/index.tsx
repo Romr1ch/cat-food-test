@@ -107,7 +107,7 @@ const Root = styled.main`
   position: relative;
   min-height: 100%;
   min-width: 100%;
-  background: url('/pattern.png');
+  background: #000 url('/background.png');
   z-index: 1;
 
   &:after {

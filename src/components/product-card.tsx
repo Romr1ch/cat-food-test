@@ -224,7 +224,7 @@ const ListItem = styled.li<{ $disabled?: boolean }>`
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  color: ${({ $disabled, theme }) => ($disabled ? theme.text.disabled : theme.text.primary)};
+  color: ${({ $disabled, theme }) => ($disabled ? theme.text.disabled : theme.text.secondary)};
 `
 
 const Image = styled.div<{ $disabled?: boolean }>`
