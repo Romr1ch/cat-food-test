@@ -30,7 +30,7 @@ interface Products {
   items: ProductItem[]
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await fetch('http://localhost:5000/api/products')
 
   if (!response.ok) {
